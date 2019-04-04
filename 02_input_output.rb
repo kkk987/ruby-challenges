@@ -6,6 +6,7 @@
 
 # User inputs: "Tom"
 
+require "io/console"
 # Program outputs:
 # "Hi Tom! How old are you?"
 
@@ -40,5 +41,8 @@ _Time = 100 - _Age.to_i
 
 puts "#{_Name}, in #{_Time} years you will be 100 years old!"
 
+puts "Press any keys to continue.."
+
+STDIN.getch
 
 
