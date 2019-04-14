@@ -1,3 +1,4 @@
+require_relative './cafe_lib.rb'
 # This challenge has three parts. Use all you have learned to
 # implement the solution. Use methods to keep your code DRY and
 # clean. Use data structures that are appropriate.
@@ -51,3 +52,18 @@
 # 1 tea
 # Order total: $11.00
 
+#items = Items.new(6, 2, 3)
+#initialize the order
+items = Items.new(0, 0, 0)
+loop do
+    #break the loop when user enter quit message
+    #while he/she doesn't make any orders
+    break if make_order(items) && check_empty_order(items)
+    #print the order
+    print_order(items)
+    #calculate the total cost
+    cost_cal(items)
+    #calculate the total profit
+    profit_cal(items)
+    break
+end
