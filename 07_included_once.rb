@@ -24,20 +24,21 @@ def included_once (haystack, needle)
   count = 0
   #search every elemnt in haystack
   haystack.each do |h|
-    #stop the loop when the occurence is more than once
-    if count > 1
-      return false
-    end
+    
     #increase the count by 1 when the word occurs
     if h == needle
       count += 1
+    end
+    #stop the loop when the occurence is more than once
+    if count > 1
+      return false
     end
   end
   #check the occurence
   if count == 1
     return true
   else
-    #word doesn't occur in the array
+    #word doesn't occur in the array or occur more than once
     return false
   end
 end
