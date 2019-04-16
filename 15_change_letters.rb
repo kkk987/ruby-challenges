@@ -19,3 +19,6 @@
 
 
 # Your code here
+puts "Enter the first input"
+input = gets.chomp
+puts output = input.gsub("s", "th")
