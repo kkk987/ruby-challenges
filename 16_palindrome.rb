@@ -21,4 +21,9 @@
 
 def palindrome (string)
   # Your code here
+  (string.downcase == string.downcase.reverse) ? true : false #(puts "true") : (puts "false") 
 end
+
+# palindrome("hello")
+# palindrome("moM")
+# palindrome("Racecar")
