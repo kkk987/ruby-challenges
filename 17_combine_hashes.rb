@@ -27,6 +27,6 @@ def combine_hashes(hash1, hash2)
   hash3 = {}
 
   # Your code here
-
+  hash3 = hash1.merge(hash2) {|key, value1, value2| (value1.class == value2.class) ? (value1+value2) : (puts "Invalid value")}
   return hash3
 end
