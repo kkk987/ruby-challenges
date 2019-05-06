@@ -13,14 +13,15 @@ def contains?(arr,val)
     ind=0
     # while we haven't found the value and we 
     # still have values to check
+    found = false
     while !found and ind < arr.length do
+        # puts "current value: #{arr[ind]}"
+        # puts "ind: #{ind}"
         if (arr[ind] == val)
             found=true
-        else
-            return false
         end
         # increment the index
-        ind +1
+        ind +=1
     end
     #return true or false, depending on if the value was found
     return found
