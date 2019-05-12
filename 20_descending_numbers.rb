@@ -17,9 +17,14 @@
 
 def descending_order(n)
     # Your code goes here
+    numbers = n.to_s.split('')
+    numbers.map {|num| num.to_i}
+    return numbers.sort.reverse.join.to_i
 end
 
 # Test your code here
-descending_order(1)
-
+puts descending_order(21445)
+puts descending_order(145263)
+puts descending_order(1254859723)
+puts descending_order(2014845)
 # Add some interesting test cases that test edge cases
