@@ -25,4 +25,26 @@
 
 def sort(num_array)
     # Your code goes here
+    # bubble sort
+    i = 0
+    sorted = false
+    num_size = num_array.length - 1
+    while sorted == false
+        sorted = true
+        while i < num_size
+            
+            if num_array[i] > num_array[i + 1]
+                #puts "before current next: #{num_array[i]} #{num_array[i+1]}"
+                num_array[i], num_array[i+1] = num_array[i+1], num_array[i]
+                #puts "after current next: #{num_array[i]} #{num_array[i+1]}"
+                sorted = false
+            end
+            i += 1
+        end
+        i = 0    
+        num_size -= 1
+    end
+    return num_array
 end
+num = [2,5,4,8,2]
+puts sort(num)
