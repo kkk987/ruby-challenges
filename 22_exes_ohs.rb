@@ -34,4 +34,33 @@
 
 def exes_and_ohs(input)
     # Your code goes here
+    letters = input.downcase.split('')
+    
+    result = letters.each_with_object(Hash.new (0)) {|letter, result| result[letter] += 1}
+    keys = result.keys
+    # puts keys
+    flag = false
+    # puts keys
+    # puts "class: #{keys[0].class}"
+    # puts result.keys[0].class
+    # a = keys[0].to_sym
+    # b = keys[1].to_sym
+    # puts "a #{a} b #{b}"
+    # puts result[a.to_sym]
+    # puts result[b.to_sym]
+    if result[keys[0]] != result[keys[1]]
+        flag = true
+    end
+    # puts "char 1:#{result[keys[0]]}  char 2: #{result[keys[1]]}"
+    # puts "flag:#{flag}"
+    if (keys.length != 2) || flag
+        return false
+    else
+        return true
+    end
+    
 end
+
+# puts exes_and_ohs("ooxx")
+# puts exes_and_ohs("oOxXxoX")
+# puts exes_and_ohs("efefy")
