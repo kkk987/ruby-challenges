@@ -39,7 +39,6 @@ def exes_and_ohs(input)
     result = letters.each_with_object(Hash.new (0)) {|letter, result| result[letter] += 1}
     keys = result.keys
     # puts keys
-    flag = false
     # puts keys
     # puts "class: #{keys[0].class}"
     # puts result.keys[0].class
@@ -48,12 +47,9 @@ def exes_and_ohs(input)
     # puts "a #{a} b #{b}"
     # puts result[a.to_sym]
     # puts result[b.to_sym]
-    if result[keys[0]] != result[keys[1]]
-        flag = true
-    end
     # puts "char 1:#{result[keys[0]]}  char 2: #{result[keys[1]]}"
     # puts "flag:#{flag}"
-    if (keys.length != 2) || flag
+    if (keys.length != 2) || (result[keys[0]] != result[keys[1]])
         return false
     else
         return true
