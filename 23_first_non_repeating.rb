@@ -25,8 +25,23 @@
 # as it would have to go over every character. Can you return on the first 
 # non-repeat, without checking every other letter?
 
+class Array
+    def difference(other)
+      h = other.each_with_object(Hash.new(0)) { |e,h| h[e] += 1 }
+      reject { |e| h[e] > 0 && h[e] -= 1 }
+   end
+end
+
 def first_non_repeating(input)
     # Your code goes here
+    words = input.chars
+    # result = words.each_with_object(Hash.new (0)) {|letter, result| result[letter] += 1}
+    if (words - (words.difference(words.uniq))).first == nil
+        return false
+    else
+        return true
+    end
+
 end
 
 # Test your code here
