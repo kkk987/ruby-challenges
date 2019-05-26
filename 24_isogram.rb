@@ -16,6 +16,20 @@
 
 def isogram?(input)
     # Your code goes here
+    input = input.chars
+    # puts "input #{input}"
+    result = input.each_with_object(Hash.new (0)) {|letter, result| result[letter] += 1}
+    result.keys.each do |key|
+        if result[key] != 1
+            return false
+        end
+    end
+    input.each do |item|
+        if (item =~ /[[:alpha:]]/) == nil
+            return false
+        end
+    end
+    return true
 end
 
 # Test your code here
