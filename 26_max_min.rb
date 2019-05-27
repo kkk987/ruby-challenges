@@ -18,4 +18,12 @@
 
 def max_min(num_string)
     # your code goes here
+    input = num_string.split(" ").map(&:to_i).sort
+    result = [input[-1], input[0]].join(" ")
+    return result
 end
+
+
+puts max_min("5 2 9 8 23 1")
+puts max_min("15 4 4 38 -9")
+puts max_min("999 1000 999 1000 6 6 6 8 0 1 2 6 9")
