@@ -15,5 +15,22 @@
 
 def remove_adjacent_duplicates(input)
     # Your code goes here
-end
+    input = input.chars
+    i = 0
+    last = ""
+    result = ""
+    while i < input.length
+        if input[i] != last
+            result += input[i]
+            last = input[i] 
+            # input.delete_at(i + 1)
+            # puts input
 
+        end
+        i += 1
+    end
+    return result
+end
+puts remove_adjacent_duplicates("CCC")
+puts remove_adjacent_duplicates("AAaAbbCCCcDDcDA")
+puts remove_adjacent_duplicates("abcABCabcABC")
