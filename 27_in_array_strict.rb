@@ -26,4 +26,22 @@
 
 def in_array_strict? (string, arr, strict)
     # your code goes here
+    if strict # strict mood
+      arr.each do |item|
+        if item == string
+          return true
+        end
+      end
+      return false
+    else #non-strict mood
+      arr.each do |item|
+        if item.downcase ==  string.downcase
+          return true
+        end
+      end
+      return false
+    end
 end
+
+puts in_array_strict?("HeLLo", ["hi", "howdy", "Hello"], true)
+puts in_array_strict?("HeLLo", ["hi", "howdy", "Hello"], false)
