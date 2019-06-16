@@ -45,4 +45,35 @@
 
 def shortest_walk(walk)
     # your code goes here
+    final_walk = []
+    result = walk.each_with_object(Hash.new (0)) {|item, hash| hash[item] += 1}
+    y_dir = result["NORTH"] - result["SOUTH"]
+    x_dir = result["EAST"] - result["WEST"]
+    while y_dir != 0
+      if y_dir > 0
+        final_walk << "NORTH"
+        y_dir -= 1
+      elsif y_dir < 0
+        final_walk << "SOUTH"
+        y_dir += 1
+      end
+    end
+    while x_dir != 0
+      if x_dir > 0
+        final_walk << "EAST"
+        x_dir -= 1
+      elsif x_dir < 0
+        final_walk << "WEST"
+        x_dir += 1
+      end
+    end
+    # puts final_walk
+    return final_walk
 end
+
+# puts shortest_walk(["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST", "WEST"])
+# puts shortest_walk(["NORTH", "SOUTH", "EAST", "WEST"])
+
+puts shortest_walk(["NORTH","SOUTH","EAST"])
+puts shortest_walk(["NORTH","SOUTH"])
+puts shortest_walk(["NORTH","SOUTH","SOUTH","EAST","WEST","NORTH","WEST"])
