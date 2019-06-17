@@ -46,3 +46,4 @@
 * 28_good_walk
 * 29_shortest_walk
 * 30_spin_words
+* 31_missing_letter
