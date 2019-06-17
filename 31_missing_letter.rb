@@ -17,4 +17,15 @@
 
 def missing_letter(word)
     # your code goes here
+    i = 0
+    while i < word.length
+      if ((word[i].ord + 1) != word[i+1].ord) && (i != word.length-1)
+        # puts "next char #{word[i+1]}"
+        return (word[i].ord + 1).chr
+      end
+      i += 1
+    end
 end
+
+# puts missing_letter(['a','b','c','d','f'])
+# puts missing_letter(['O','Q','R','S'])
