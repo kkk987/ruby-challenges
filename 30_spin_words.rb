@@ -17,4 +17,15 @@
 
 def spin_words (words)
     # your code goes here
+    inputs = words.split(" ")
+    inputs.each do |item|
+      if item.length >= 5
+        item.reverse!
+      end
+    end
+    return inputs.join(" ")
 end
+
+puts spin_words ("Hey fellow warriors")
+puts spin_words( "This is a test")
+puts spin_words( "This is another test" )
