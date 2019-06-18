@@ -17,4 +17,15 @@
 
 def digital_root(number)
     # Your code goes here
+    if (number.is_a? Numeric) && (number >= 0)
+      inputs = number.to_s.split("")
+      return inputs.join("").to_i if inputs.length == 1
+      sum = inputs.map(&:to_i).sum
+      digital_root(sum)
+    else
+      return -1
+    end
 end
+
+# puts digital_root(1000000000000000000000000000001)
+# puts digital_root(890)
