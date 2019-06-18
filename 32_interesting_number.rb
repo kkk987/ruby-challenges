@@ -64,10 +64,10 @@ def interesting_number(number)
 end
 
 
-puts interesting_number(789)
-puts interesting_number(321)
-puts interesting_number(798)
-puts interesting_number(6)
-puts interesting_number(23)
-puts interesting_number(3210)
-puts interesting_number(7890)
+# puts interesting_number(789)
+# puts interesting_number(321)
+# puts interesting_number(798)
+# puts interesting_number(6)
+# puts interesting_number(23)
+# puts interesting_number(3210)
+# puts interesting_number(7890)
